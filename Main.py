@@ -17,7 +17,7 @@ def ping(ip_address):
         print(f"Ping failed: {e.output}")
         return False
 
-if ping(IP):
+if ping(ip):
     print(f"Ping to {ip} was successful!")
 else:
     print(f"Ping to {ip} failed.")
