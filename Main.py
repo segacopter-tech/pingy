@@ -2,7 +2,7 @@ import socket
 import subprocess
 
 host = input("website> ")
-IP = socket.gethostbyname(host)
+ip = socket.gethostbyname(host)
 
 def ping(ip_address):
     try:
@@ -11,11 +11,11 @@ def ping(ip_address):
             stderr=subprocess.STDOUT,
             universal_newlines=True
         )
-        print(output)
-        return True
+      print(output)
+      return True
     except subprocess.CalledProcessError as e:
         print(f"Ping failed: {e.output}")
-        return False
+    return False
 
 if ping(ip):
     print(f"Ping to {ip} was successful!")
